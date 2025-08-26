@@ -1,0 +1,88 @@
+body {
+    background-color: teal;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(255,198,0);
+    width: 400px;
+    min-height: 500px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+}
+  
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font: bold 2.5rem serif;
+    border-bottom: solid 5px black;
+    margin-bottom: 20px;
+}
+  
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.field label {
+    font: bold 1.2rem serif;
+    margin-bottom: 5px;
+}
+
+.field input {
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    font: bold 1rem serif;
+    text-align: center;
+    width: 100%;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 3px;
+    height: 16px; /* reserva espaço fixo */
+}
+  
+button {
+    width: 100%;
+    height: 40px;
+    font: bold 1.2rem serif;
+    background: #000;
+    color: rgb(255,198,0);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+  
+.success-box {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    font: bold 1.2rem serif;
+    background: #155724;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 8px black;
+}
