@@ -4,6 +4,7 @@ function limpar_Inputs(){
 
 }
 
+const successBox = document.getElementById('success-box'); // CORREÇÃO: referência à caixinha
 
 const botao_Enviar = document.getElementById('enviar');
 botao_Enviar.addEventListener('click', envio);
@@ -21,7 +22,7 @@ function envio(event) {
     const email = document.getElementById('email').value.trim();
     const senha = document.getElementById('senha').value.trim();
 
-    let valido = false;
+    let valido = true;
 
     if (nome === "") {
         document.getElementById('error-nome').textContent = "O campo Nome é obrigatório.";
@@ -50,6 +51,8 @@ function envio(event) {
 
     if (valido) {
         document.getElementById("success-box").style.display = "block";
+        successBox.textContent = "Cadastro realizado com sucesso!";
+        
         limpar_Inputs();
     }
    
