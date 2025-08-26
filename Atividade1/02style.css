@@ -74,15 +74,15 @@ button {
     margin-top: 20px;
 }
   
-.success-box {
-    display: none;
-    margin-top: 20px;
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    font: bold 1.2rem serif;
-    background: #155724;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0px 0px 8px black;
+/* ✅ Caixa de sucesso */
+.success-box{
+  display: none;            /* começa escondida */
+  width: 100%; margin-top: 16px; padding: 14px;
+  border-radius: 8px;
+  background: #d4edda;      /* verde claro */
+  border: 1px solid #c3e6cb;
+  color: #0f5132;           /* verde escuro (texto) */
+  font: 600 1rem system-ui, Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,.15);
 }
