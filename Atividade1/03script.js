@@ -4,7 +4,8 @@ function limpar_Inputs(){
 
 }
 
-const successBox = document.getElementById('success-box'); // CORREÇÃO: referência à caixinha
+//NÃO É NECESSÁRIO
+//const successBox = document.getElementById('success-box'); // CORREÇÃO: referência à caixinha
 
 const botao_Enviar = document.getElementById('enviar');
 botao_Enviar.addEventListener('click', envio);
