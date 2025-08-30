@@ -1,11 +1,7 @@
-function limpar_Inputs(){
-    
-    document.getElementById('formulario').reset();
-
-}
-
 const botao_Enviar = document.getElementById('enviar');
 botao_Enviar.addEventListener('click', envio);
+
+const sucesso = document.getElementById('sucesso');
 
 async function envio(event){
     event.preventDefault();
@@ -18,38 +14,48 @@ async function envio(event){
     document.getElementById('error-email').textContent = '';
     document.getElementById('error-senha').textContent = '';
 
-    document.getElementById('sucesso').style.display = 'none';
+   
+
+    
 
     let validar = true;
 
     if (!nome){
-        document.getElementById('error-nome').textContent = 'Preenchimento obrigatorio do campo nome!!!';
+        document.getElementById('error-nome').textContent = 'Campo nome obrigatório!!!';
         validar = false;
+
     }
 
     if (!email){
-        document.getElementById('error-email').textContent = 'Preenchimento obrigatório do  campo e-mail!!!';
+        document.getElementById('error-email').textContent = 'Campo e-mail obrigatório!!!';
         validar = false;
     }
+
     else if (!email.includes('@')){
-        document.getElementById('error-email').textContent = 'E-mail inválido!!!';
+        document.getElementById('error-email').textContent = 'Digite um e-mail válido!!!';
         validar = false;
     }
 
     if (!senha){
-        document.getElementById('error-senha').textContent = 'Preenchimento obrigatório do campo senha!!!';
+        document.getElementById('error-senha').textContent = 'Campo senha obrigatório!!! ';
         validar = false;
     }
 
-    else if (senha.length < 6){
-        document.getElementById('error-senha').textContent = 'Sua senha deve de conter no mínimo 6 caracteres!!!';
+    else if (senha.length < 6) {
+        document.getElementById('error-senha').textContent = 'Sua senha deve conter no mínimo 6 caracteres!!!';
         validar = false;
+
     }
 
     if (validar){
-        document.getElementById('sucesso').style.display = 'block';
-
-        limpar_Inputs();
-
+        
+        
+        
+        sucesso.style.display = 'block';
+        
+        
     }
+
+   
+
 }
