@@ -3,43 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form id="formulario">
         <main>
             <div class="container">
+
                 <div class="title">Cadastro</div>
 
                 <div class="field">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome">
-                    <div class="error-message" id="error-nome"></div>
+                    <div class="message-error" id="error-nome"></div>
                 </div>
 
                 <div class="field">
                     <label for="email">E-mail</label>
                     <input type="text" id="email">
-                    <div class="error-message" id="error-email"></div>
+                    <div class="message-error" id="error-email"></div>
                 </div>
 
                 <div class="field">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha">
-                    <div class="error-message" id="error-senha"></div>
+                    <div class="message-error" id="error-senha"></div>
                 </div>
+
 
                 <button type="submit" id="enviar">Enviar</button>
 
-                <!-- Caixa de sucesso -->
-                <div id="success-box" class="success-box">
-                    Cadastro realizado com sucesso!
-                </div>
-            </div>
-        </main>
-    </form>
+                <div class="sucesso" id="sucesso">Cadastro efetuado com sucesso!!!</div>
 
-    <script src="script.js"></script>    
+            </div>
+
+
+        </main>
+
+    </form>
+    <script src="script.js"></script>
+    
 </body>
 </html>
