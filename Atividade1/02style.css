@@ -1,88 +1,118 @@
-body {
-    background-color: teal;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-main {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+/* Fundo com gradiente */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
-  
+
+/* Container principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    background: rgb(255,198,0);
-    width: 400px;
-    min-height: 500px;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px black;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in-out;
 }
-  
+
+/* Título */
 .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    font: bold 2.5rem serif;
-    border-bottom: solid 5px black;
-    margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
-  
+
+/* Campos */
 .field {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 15px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .field label {
-    font: bold 1.2rem serif;
-    margin-bottom: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #444;
 }
 
 .field input {
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    outline: 0;
-    font: bold 1rem serif;
-    text-align: center;
-    width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
 }
 
-.error-message {
-    color: red;
-    font-size: 0.85rem;
-    margin-top: 3px;
-    height: 16px; /* reserva espaço fixo */
+.field input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
 }
+
+/* Mensagens de erro */
+.message-error {
+  font-size: 0.85rem;
+  color: #ff4d4d;
+  margin-top: 0.3rem;
   
+}
+
+/* Botão */
 button {
-    width: 100%;
-    height: 40px;
-    font: bold 1.2rem serif;
-    background: #000;
-    color: rgb(255,198,0);
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-  
-/* ✅ Caixa de sucesso */
-.success-box{
-  display: none;            /* começa escondida */
-  width: 100%; margin-top: 16px; padding: 14px;
-  border-radius: 8px;
-  background: #d4edda;      /* verde claro */
-  border: 1px solid #c3e6cb;
-  color: #0f5132;           /* verde escuro (texto) */
-  font: 600 1rem system-ui, Arial, sans-serif;
+
+button:hover {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Mensagem de sucesso */
+.sucesso {
+  margin-top: 1rem;
+  padding: 0.8rem;
   text-align: center;
-  box-shadow: 0 0 8px rgba(0,0,0,.15);
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #2e7d32;
+  background: #e8f5e9;
+  border: 1px solid #2e7d32;
+  border-radius: 10px;
+  display: none; /* esconde até ser acionada */
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
